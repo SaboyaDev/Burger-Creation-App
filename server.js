@@ -33,6 +33,7 @@ require("./routes/api-routes.js")(app);
 // =============================================================
 app.listen(PORT, () => {
   console.log("Listening on PORT:" + PORT);
+  console.log("http://localhost:" + PORT);
 });
 
 
