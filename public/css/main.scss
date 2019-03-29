@@ -126,22 +126,6 @@ main {
     }
   }
 
-  #devour {
-    display: flex;
-    justify-content: center;
-
-    .devour-btn {
-      margin-left: 1em;
-      padding: 0.3em 1em;
-      border-radius: 30px;
-      background-color: #ffc107;
-    }
-
-    .devour-btn::hover {
-      color: rgb(255, 255, 255);
-    }
-  }
-
   .burger-creation {
     display: flex;
     justify-content: center;
@@ -174,9 +158,12 @@ main {
         padding: 0.3em 1em;
         border-radius: 30px;
         background-color: #ffc107;
+        border: 1px solid black;
       }
 
       .submit-btn:hover {
+        background-color: black;
+        border: 1px solid #ffc107;
         color: rgb(255, 255, 255);
       }
     }
@@ -193,6 +180,24 @@ main {
     text-align: center;
   }
 
+  form {
+    display: flex;
+    justify-content: center;
+
+    .devour-btn {
+      margin-left: 1em;
+      padding: 0.3em 1em;
+      border-radius: 30px;
+      background-color: #ffc107;
+      border: 1px solid black;
+    }
+
+    .devour-btn:hover {
+      background-color: black;
+      border: 1px solid #ffc107;
+      color: rgb(255, 255, 255);
+    }
+  }
 }
 
 hr {

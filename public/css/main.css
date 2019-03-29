@@ -146,26 +146,6 @@ main .my-tables .burgers-devoured {
   margin-left: 0.5em;
 }
 
-main #devour {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-main #devour .devour-btn {
-  margin-left: 1em;
-  padding: 0.3em 1em;
-  border-radius: 30px;
-  background-color: #ffc107;
-}
-
-main #devour .devour-btn::hover {
-  color: white;
-}
-
 main .burger-creation {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -223,9 +203,12 @@ main .burger-creation form .submit-btn {
   padding: 0.3em 1em;
   border-radius: 30px;
   background-color: #ffc107;
+  border: 1px solid black;
 }
 
 main .burger-creation form .submit-btn:hover {
+  background-color: black;
+  border: 1px solid #ffc107;
   color: white;
 }
 
@@ -242,6 +225,29 @@ main .instruction {
   padding: 1em;
   font-size: 0.3em;
   text-align: center;
+}
+
+main form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main form .devour-btn {
+  margin-left: 1em;
+  padding: 0.3em 1em;
+  border-radius: 30px;
+  background-color: #ffc107;
+  border: 1px solid black;
+}
+
+main form .devour-btn:hover {
+  background-color: black;
+  border: 1px solid #ffc107;
+  color: white;
 }
 
 hr {

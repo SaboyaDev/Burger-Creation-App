@@ -42,9 +42,8 @@
       <article>
         {{#each burger}}
         {{#unless this.devoured}}
-        <pre>
-          {{this.id}}. {{this.burger_name}}
-        </pre>
+        <pre id="burger-id">{{this.id}}</pre>
+        <pre id="burger-name">{{this.burger_name}}</pre>
         {{/unless}}
         {{/each}}
       </article>
