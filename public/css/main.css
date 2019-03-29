@@ -1,37 +1,47 @@
 @import url("https://use.typekit.net/hpz8vqo.css");
 @import url("https://use.typekit.net/hpz8vqo.css");
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   background-color: black;
   text-decoration: none;
   font-family: ff-cocon-pro, sans-serif;
+  color: white;
 }
 
 nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding: 1em;
   width: 100%;
-  height: 4.2em;
-  border-bottom: 3px solid yellow;
+  height: 4.8em;
+  border-bottom: 3px solid #ffc107;
 }
 
 nav a {
   font-family: sarina, sans-serif;
-  color: yellow;
-  font-size: 1em;
+  color: #ffc107;
+  font-size: 1.3em;
 }
 
 nav a:hover {
   text-decoration: none;
-  color: yellow;
+  color: #ffc107;
+}
+
+nav p {
+  font-size: 0.6rem;
+  color: white;
+  margin: none;
 }
 
 .intro {
@@ -45,11 +55,11 @@ nav a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 1em;
+  padding: 4em 1em 1em 1em;
 }
 
 .intro header {
-  margin: 2em;
+  margin: 4em 2em 1em 2em;
   color: white;
   text-align: center;
 }
@@ -64,13 +74,256 @@ nav a:hover {
 }
 
 .intro .burgerIcon1 {
-  width: 180px;
-  border-radius: 100px;
-  -webkit-box-shadow: 0 0 110px yellow;
-          box-shadow: 0 0 110px yellow;
+  width: 13em;
 }
 
 .intro .burgerIcon2 {
   display: none;
+}
+
+.call2action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1em;
+}
+
+.call2action img {
+  width: 5em;
+  height: 8em;
+  -webkit-animation: shake 2.5s infinite cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+          animation: shake 2.5s infinite cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-perspective: 62.5em;
+          perspective: 62.5em;
+}
+
+main {
+  margin-top: 3em;
+  text-align: center;
+}
+
+main .my-tables {
+  padding: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  margin-bottom: 1.3em;
+}
+
+main .my-tables h1 {
+  font-size: 1em;
+}
+
+main .my-tables .burgers2eat,
+main .my-tables .burgers-devoured {
+  height: 15em;
+  width: 70%;
+  overflow-y: auto;
+}
+
+main .my-tables .burgers2eat article,
+main .my-tables .burgers-devoured article {
+  width: 100%;
+  height: 90%;
+  background-color: white;
+  color: black;
+  text-align: left;
+}
+
+main .my-tables .burgers2eat {
+  margin-right: 0.5em;
+}
+
+main .my-tables .burgers-devoured {
+  margin-left: 0.5em;
+}
+
+main #devour {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main #devour .devour-btn {
+  margin-left: 1em;
+  padding: 0.3em 1em;
+  border-radius: 30px;
+  background-color: #ffc107;
+}
+
+main #devour .devour-btn::hover {
+  color: white;
+}
+
+main .burger-creation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 3em 0 1em 0;
+  padding: 1em;
+}
+
+main .burger-creation form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  color: white;
+}
+
+main .burger-creation form ::-webkit-input-placeholder {
+  color: #d8d0d1;
+}
+
+main .burger-creation form :-ms-input-placeholder {
+  color: #d8d0d1;
+}
+
+main .burger-creation form ::-ms-input-placeholder {
+  color: #d8d0d1;
+}
+
+main .burger-creation form ::placeholder {
+  color: #d8d0d1;
+}
+
+main .burger-creation form input {
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 8px;
+  margin-left: 1em;
+  padding: 0.3em 0.6em;
+}
+
+main .burger-creation form .submit-btn {
+  margin-left: 1em;
+  padding: 0.3em 1em;
+  border-radius: 30px;
+  background-color: #ffc107;
+}
+
+main .burger-creation form .submit-btn:hover {
+  color: white;
+}
+
+main .instruction {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 1em 0;
+  font-style: italic;
+  color: #c4c4c4;
+  padding: 1em;
+  font-size: 0.3em;
+  text-align: center;
+}
+
+hr {
+  margin-top: 3em;
+  border-top: 3px solid #ffc107 !important;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1em 0 1em 0;
+  padding: 0 1em;
+  color: #fff;
+  text-decoration: none;
+}
+
+footer .copyright p {
+  margin-bottom: 0.5em;
+}
+
+footer .social a {
+  color: #cb0814;
+}
+
+footer .social a:hover {
+  color: #ffc107;
+}
+
+/* ===================================================== */
+@-webkit-keyframes shake {
+  5% {
+    -webkit-transform: translate3d(-7px, 0, 0);
+            transform: translate3d(-7px, 0, 0);
+  }
+  10% {
+    -webkit-transform: translate3d(2px, 0, 0);
+            transform: translate3d(2px, 0, 0);
+  }
+  15% {
+    -webkit-transform: translate3d(-4px, 0, 0);
+            transform: translate3d(-4px, 0, 0);
+  }
+  20% {
+    -webkit-transform: translate3d(4px, 0, 0);
+            transform: translate3d(4px, 0, 0);
+  }
+  30% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes shake {
+  5% {
+    -webkit-transform: translate3d(-7px, 0, 0);
+            transform: translate3d(-7px, 0, 0);
+  }
+  10% {
+    -webkit-transform: translate3d(2px, 0, 0);
+            transform: translate3d(2px, 0, 0);
+  }
+  15% {
+    -webkit-transform: translate3d(-4px, 0, 0);
+            transform: translate3d(-4px, 0, 0);
+  }
+  20% {
+    -webkit-transform: translate3d(4px, 0, 0);
+            transform: translate3d(4px, 0, 0);
+  }
+  30% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
 }
 /*# sourceMappingURL=main.css.map */

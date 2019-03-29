@@ -3,17 +3,86 @@
     <a href="#" id="logo">
       BURGR.
     </a>
+    <p>Since 1955</p>
   </nav>
   <section class="intro">
+    <img class="burgerIcon1" src="/images/SVG/Burger.svg" alt="">
     <header id="title">
       <h1 id="top">Welcome</h1>
-      <h1 id="middle">To</h1>
+      <h1 id="middle">- To -</h1>
       <h1 id="btn">BURGR.</h1>
+      <h6>- CREATINONS -</h6>
     </header>
-    <img class="burgerIcon1" src="/images/SVG/Burger.svg" alt="">
-    <img class="burgerIcon2" src="/images/SVG/Burger.svg" alt="">
+    <img class="burgerIcon2" src="/images/SVG/Burger.svg" alt="cheese-burger">
   </section>
+
+  <div class="call2action">
+    <a href="#creation">
+      <img src="/images/SVG/french-fries.svg" alt="french-fries">
+    </a>
+  </div>
 </header>
 
-{{!-- {{> footer}} --}}
+<main>
+  <section class="burger-creation" id="creation">
+    {{!-- <form action="/burgers/create" method="POST"> --}}
+    <form action="#" method="POST">
+      <input type="text" class="" name="burger_name" value="" placeholder="Burger Name" id="burger-name">
+      <button type="submit" class="submit-btn" id="burger-name-submission">Submit</button>
+    </form>
+  </section>
+  <section class="instruction">
+    <h6>*Enter a burger name you would like to eat, Click the " Submit " button*</h6>
+  </section>
+
+  <div class="my-tables">
+
+    <section class="burgers2eat">
+      <h1>Burgers</h1>
+      <article>
+        {{#each burger}}
+        {{#unless this.devoured}}
+        <pre>
+          {{this.id}}. {{this.burger_name}}
+        </pre>
+        {{/unless}}
+        {{/each}}
+      </article>
+    </section>
+
+    <section class="burgers-devoured">
+      <h1>Burgers Devoured</h1>
+      <article>
+        {{#each burger}}
+        {{#unless this.devoured}}
+      </article>
+      {{/unless}}
+      {{/each}}
+    </section>
+
+  </div>
+
+  <form id="devour">
+    <input input type="hidden" class="burger_id" type="text">
+    <br>
+    <button type="submit" class="devour-btn">Devour it!</button>
+  </form>
+
+</main>
+
+<hr class="underLine">
+
+<footer>
+  <section class="copyright">
+    <p>Jose L Saboya &copy; 2019</p>
+  </section>
+
+  <section class="social">
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-github"></i></a>
+  </section>
+</footer>
+
+{{!-- {{footer}} --}}
 <script src="/javascript/main.js"></script>
