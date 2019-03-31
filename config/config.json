@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "",
-    "database": "burger_db",
+    "database": "dbBurger",
     "host": "127.0.0.1",
     "port": 3306,
     "dialect": "mysql"
@@ -15,10 +15,11 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
+    "username": "cjo5hcvacnl4jyz8",
+    "password": "l8dpcu1j1leb1adq",
+    "database": "gniec7vwguqsev0o",
+    "host": "cig4l2op6r0fxymw.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "port": 3306,
     "dialect": "mysql"
   }
 }

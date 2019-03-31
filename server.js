@@ -8,32 +8,39 @@
 var express = require("express");
 var exphbs = require("express-handlebars");
 
+// Models Import
+// =============================================================
+var db = require("./models");
+
 // Express Set up
 // =============================================================
 var app = express();
 var PORT = process.env.PORT || 8086;
 
 // Allows Express to handle data parsing
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({
+  extended: true
+}));
 app.use(express.json());
 
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.engine("handlebars", exphbs({
+  defaultLayout: "main"
+}));
 app.set("view engine", "handlebars");
 
 // Static Files
 // =============================================================
 app.use(express.static("public/"));
 
-// Routes
+// Controller
 // =============================================================
-require("./routes/html-routes.js")(app);
-require("./routes/api-routes.js")(app);
+require("./controllers/burgersController.js")(app);
 
 // Listener
 // =============================================================
-app.listen(PORT, () => {
-  console.log("Listening on PORT:" + PORT);
-  console.log("http://localhost:" + PORT);
+db.sequelize.sync().then(function() {
+  app.listen(PORT, function() {
+    console.log("Listening on PORT:" + PORT);
+    console.log("http://localhost:" + PORT);
+  });
 });
-
-

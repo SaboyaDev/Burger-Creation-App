@@ -26,9 +26,9 @@
 <main>
   <section class="burger-creation" id="creation">
     {{!-- <form action="/burgers/create" method="POST"> --}}
-    <form action="#" method="POST">
+    <form>
       <input type="text" class="" name="burger_name" value="" placeholder="Burger Name" id="burger-name">
-      <button type="submit" class="submit-btn" id="burger-name-submission">Submit</button>
+      <button class="submit-btn" id="burger-name-submission">Submit</button>
     </form>
   </section>
   <section class="instruction">
@@ -42,30 +42,34 @@
       <article>
         {{#each burger}}
         {{#unless this.devoured}}
-        <pre id="burger-id">{{this.id}}</pre>
-        <pre id="burger-name">{{this.burger_name}}</pre>
+        <input type="radio" name="burger-name" value="{{this.id}}"> {{this.burger_name}}
+        <br>
         {{/unless}}
         {{/each}}
       </article>
+
+      <form id="devour">
+        <button class="devour-btn">Devour It!</button>
+      </form>
     </section>
 
     <section class="burgers-devoured">
       <h1>Burgers Devoured</h1>
       <article>
         {{#each burger}}
-        {{#unless this.devoured}}
+        {{#if this.devoured}}
+        <input type="radio" name="burger-name" value="{{this.id}}"> {{this.burger_name}}
+        <br>
+        {{/if}}
+        {{/each}}
       </article>
-      {{/unless}}
-      {{/each}}
+
+       <form id="brig-back">
+        <button class="bring-back-btn">Bring Back!</button>
+      </form>
     </section>
 
   </div>
-
-  <form id="devour">
-    <input input type="hidden" class="burger_id" type="text">
-    <br>
-    <button type="submit" class="devour-btn">Devour it!</button>
-  </form>
 
 </main>
 

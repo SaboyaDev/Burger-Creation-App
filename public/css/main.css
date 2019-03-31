@@ -107,43 +107,7 @@ nav p {
 main {
   margin-top: 3em;
   text-align: center;
-}
-
-main .my-tables {
-  padding: 1em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  color: white;
-  margin-bottom: 1.3em;
-}
-
-main .my-tables h1 {
-  font-size: 1em;
-}
-
-main .my-tables .burgers2eat,
-main .my-tables .burgers-devoured {
-  height: 15em;
-  width: 70%;
-  overflow-y: auto;
-}
-
-main .my-tables .burgers2eat article,
-main .my-tables .burgers-devoured article {
-  width: 100%;
-  height: 90%;
-  background-color: white;
-  color: black;
-  text-align: left;
-}
-
-main .my-tables .burgers2eat {
-  margin-right: 0.5em;
-}
-
-main .my-tables .burgers-devoured {
-  margin-left: 0.5em;
+  height: 100%;
 }
 
 main .burger-creation {
@@ -227,7 +191,43 @@ main .instruction {
   text-align: center;
 }
 
-main form {
+main .my-tables {
+  padding: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  height: 100%;
+}
+
+main .my-tables h1 {
+  font-size: 1em;
+}
+
+main .my-tables .burgers2eat,
+main .my-tables .burgers-devoured {
+  height: 100%;
+  width: 70%;
+}
+
+main .my-tables .burgers2eat article,
+main .my-tables .burgers-devoured article {
+  width: 100%;
+  height: 19em;
+  padding: 0.4em;
+  margin-bottom: 2em;
+  background-color: white;
+  color: black;
+  text-align: left;
+  overflow-y: auto;
+  font-size: 0.8em;
+}
+
+main .my-tables .burgers2eat {
+  margin-right: 0.5em;
+}
+
+main .my-tables .burgers2eat form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -236,22 +236,46 @@ main form {
           justify-content: center;
 }
 
-main form .devour-btn {
-  margin-left: 1em;
+main .my-tables .burgers2eat form .devour-btn {
   padding: 0.3em 1em;
   border-radius: 30px;
   background-color: #ffc107;
   border: 1px solid black;
 }
 
-main form .devour-btn:hover {
+main .my-tables .burgers2eat form .devour-btn:hover {
+  background-color: black;
+  border: 1px solid #ffc107;
+  color: white;
+}
+
+main .my-tables .burgers-devoured {
+  margin-left: 0.5em;
+}
+
+main .my-tables .burgers-devoured form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .my-tables .burgers-devoured form .bring-back-btn {
+  padding: 0.3em 1em;
+  border-radius: 30px;
+  background-color: #ffc107;
+  border: 1px solid black;
+}
+
+main .my-tables .burgers-devoured form .bring-back-btn:hover {
   background-color: black;
   border: 1px solid #ffc107;
   color: white;
 }
 
 hr {
-  margin-top: 3em;
   border-top: 3px solid #ffc107 !important;
 }
 
@@ -269,8 +293,8 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 1em 0 1em 0;
-  padding: 0 1em;
+  margin-top: 1em;
+  padding: 0 1em 1em 1em;
   color: #fff;
   text-decoration: none;
 }
