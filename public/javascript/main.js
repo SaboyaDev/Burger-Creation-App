@@ -5,6 +5,24 @@ $(".submit-btn").on("click", (event) => {
   collectBurgerName();
 });
 
+// Devour Button
+// =================================================
+$(".devour-btn").on("click", (event)=>{
+  event.preventDefault();
+  let state = false;
+  update(state);
+});
+
+// Bring Back Button
+// =================================================
+$(".bring-back-btn").on("click", (event) => {
+  event.preventDefault();
+  let state = true;
+  update(state);
+});
+
+// Function Definitions
+// =================================================
 var collectBurgerName = () => {
   var burgerName = {
     burger_name: $("#burger-name").val()
@@ -16,19 +34,20 @@ var collectBurgerName = () => {
 
 var postBurgerCreation = (burgerName) => {
   $.post("/burgers/create", burgerName, (data) => {
-    console.log(data);
+    // console.log(data);
     location.reload();
   }) 
 }
 
-// Devour Button
-// =================================================
-$(".devour-btn").on("click", (event)=>{
-  event.preventDefault();
+var update = (state) => {
   var burger_Id = {
-    id: $("[name='burger-name']:checked").val()
+    id: $("[name='burger-name']:checked").val(),
+    state: state
   };
-  console.log(burger_Id.id);
+  console.log({
+      id: burger_Id.id,
+      state: burger_Id.state
+    });
   $.ajax({
     method: "PUT",
     url: "/burgers/update",
@@ -36,4 +55,4 @@ $(".devour-btn").on("click", (event)=>{
   }).then((data) => {
     location.reload();
   });
-});
+}

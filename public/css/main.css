@@ -1,5 +1,54 @@
+/* ===================================================== */
 @import url("https://use.typekit.net/hpz8vqo.css");
 @import url("https://use.typekit.net/hpz8vqo.css");
+/* ===================================================== */
+/* ===================================================== */
+@-webkit-keyframes shake {
+  5% {
+    -webkit-transform: translate3d(-7px, 0, 0);
+            transform: translate3d(-7px, 0, 0);
+  }
+  10% {
+    -webkit-transform: translate3d(2px, 0, 0);
+            transform: translate3d(2px, 0, 0);
+  }
+  15% {
+    -webkit-transform: translate3d(-4px, 0, 0);
+            transform: translate3d(-4px, 0, 0);
+  }
+  20% {
+    -webkit-transform: translate3d(4px, 0, 0);
+            transform: translate3d(4px, 0, 0);
+  }
+  30% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes shake {
+  5% {
+    -webkit-transform: translate3d(-7px, 0, 0);
+            transform: translate3d(-7px, 0, 0);
+  }
+  10% {
+    -webkit-transform: translate3d(2px, 0, 0);
+            transform: translate3d(2px, 0, 0);
+  }
+  15% {
+    -webkit-transform: translate3d(-4px, 0, 0);
+            transform: translate3d(-4px, 0, 0);
+  }
+  20% {
+    -webkit-transform: translate3d(4px, 0, 0);
+            transform: translate3d(4px, 0, 0);
+  }
+  30% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+/* ===================================================== */
 html,
 body {
   margin: 0;
@@ -73,11 +122,12 @@ nav p {
   font-size: 3.5em;
 }
 
-.intro .burgerIcon1 {
+.intro #burgerIcon1,
+.intro #burgerIcon2 {
   width: 13em;
 }
 
-.intro .burgerIcon2 {
+.intro .hideBurger {
   display: none;
 }
 
@@ -312,48 +362,50 @@ footer .social a:hover {
 }
 
 /* ===================================================== */
-@-webkit-keyframes shake {
-  5% {
-    -webkit-transform: translate3d(-7px, 0, 0);
-            transform: translate3d(-7px, 0, 0);
+@media (min-width: 768px) {
+  header {
+    padding-bottom: 1em;
   }
-  10% {
-    -webkit-transform: translate3d(2px, 0, 0);
-            transform: translate3d(2px, 0, 0);
+  header .intro {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    padding: 0 1em;
   }
-  15% {
-    -webkit-transform: translate3d(-4px, 0, 0);
-            transform: translate3d(-4px, 0, 0);
+  header .intro header {
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  20% {
-    -webkit-transform: translate3d(4px, 0, 0);
-            transform: translate3d(4px, 0, 0);
+  header .intro header #top,
+  header .intro header #middle {
+    font-size: 3em;
   }
-  30% {
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
+  header .intro header #btn {
+    font-size: 4.5em;
   }
-}
-@keyframes shake {
-  5% {
-    -webkit-transform: translate3d(-7px, 0, 0);
-            transform: translate3d(-7px, 0, 0);
-  }
-  10% {
-    -webkit-transform: translate3d(2px, 0, 0);
-            transform: translate3d(2px, 0, 0);
-  }
-  15% {
-    -webkit-transform: translate3d(-4px, 0, 0);
-            transform: translate3d(-4px, 0, 0);
-  }
-  20% {
-    -webkit-transform: translate3d(4px, 0, 0);
-            transform: translate3d(4px, 0, 0);
-  }
-  30% {
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
+  header .intro #burgerIcon2,
+  header .intro #burgerIcon1 {
+    width: 15em;
   }
 }
 /*# sourceMappingURL=main.css.map */
