@@ -365,6 +365,10 @@ footer .social a:hover {
 @media (min-width: 768px) {
   header {
     padding-bottom: 1em;
+    margin-bottom: 1em;
+  }
+  header .intro-wrapper {
+    height: 100vh;
   }
   header .intro {
     display: -webkit-box;
@@ -378,34 +382,46 @@ footer .social a:hover {
         justify-content: space-around;
     -ms-flex-line-pack: center;
         align-content: center;
-    padding: 0 1em;
-  }
-  header .intro header {
-    margin: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-  }
-  header .intro header #top,
-  header .intro header #middle {
-    font-size: 3em;
-  }
-  header .intro header #btn {
-    font-size: 4.5em;
+    height: calc(100vh - 29%);
+    padding: 0 1em;
   }
   header .intro #burgerIcon2,
   header .intro #burgerIcon1 {
     width: 15em;
+  }
+  header .intro #title #top,
+  header .intro #title #middle {
+    font-size: 3em;
+  }
+  header .intro #title #btn {
+    font-size: 4.5em;
+  }
+  header .call2action img {
+    font-size: 1em;
+  }
+  .call2action {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 1em;
+  }
+  .call2action img {
+    width: 5em;
+    height: 8em;
+    -webkit-animation: shake 2.5s infinite cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+            animation: shake 2.5s infinite cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    -webkit-perspective: 62.5em;
+            perspective: 62.5em;
   }
 }
 /*# sourceMappingURL=main.css.map */
