@@ -12,6 +12,7 @@ link: https://burger-creation.herokuapp.com/burgers
 - Handlebars
 - Express
 - SVG Files
+- SCSS
 
 <p float="left">
   <img src="https://saboya-dev-github.s3.amazonaws.com/Screen+Shot+2020-11-10+at+6.07.43+PM.png" width=400px />
