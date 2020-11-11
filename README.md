@@ -1,4 +1,4 @@
-# Burger Creation App - Full Stack App 
+# 🍔 Burger Creation App 🍟 Full Stack App 🍔
 ## Using MVC and Handlebars
 
 A responsive Full Stack fast food restaurant app that let's you create your own kind of burger that you would like to eat, plus you get to name your creation creation.
